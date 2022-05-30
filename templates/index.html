@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+{%load static%}
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Meeting Registration</title>
+
+    <!-- Font Icon -->
+    <link rel="stylesheet" href="{% static 'fonts/material-icon/css/material-design-iconic-font.min.css'%}">
+
+    <!-- Main css -->
+    <link rel="stylesheet" href="{% static 'css/style.css'%}">
+</head>
+<body>
+    {{form}}
+    <div class="main">
+        <div class="container">
+            <div class="signup-content">
+                <!--div align="right" class="signup-img">
+                    <img src="{% static 'images/poster.JPG'%}" alt="Image Error", width="400">
+                </!--div-->
+                <div class="signup-form">
+                    <form method="POST" class="register-form" id="register-form", action="VerifyParticipant", enctype='multipart/form-data'>
+                        {% csrf_token %}
+                        <h2>Fill Form to Enter Meeting:</h2>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="phone_no">Phone Number:</label>
+                                <input type="Number" name="phone_no" id="phone_no" required/>
+                            </div>
+                        </div>
+                        <!--div class="form-group">
+                            <label for="course">Course :</label>
+                            <div class="form-select">
+                                <select name="course" id="course">
+                                    <option value="Hindi">Hindi Language</option>
+                                    <option value="English">English Language</option>
+                                </select>
+                                <span class="select-icon"><i class="zmdi zmdi-chevron-down"></i></span>
+                            </div>
+                        </div-->
+                        <div class="form-group">
+                            <label for="rollno">Roll Number :</label>
+                            <input type="rollno" name="rollno" id="rollno" />
+                        </div>
+                        <div class="form-submit">
+                            <input type="submit" value="CONTINUE" class="submit" name="submit" id="submit" />
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- JS -->
+    <script src="{% static 'vendor/jquery/jquery.min.js'%}"></script>
+    <script src="{% static 'js/main.js'%}"></script>
+</body>
+</html>
