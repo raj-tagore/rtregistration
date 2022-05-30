@@ -1,1 +1,1 @@
-web: gunicorn RTRegistration.wsgi
+web:gunicorn RTRegistration.wsgi
