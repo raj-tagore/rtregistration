@@ -1,1 +1,1 @@
-web: gunicorn salesmanfactory.wsgi
+web: gunicorn RTRegistration.wsgi
